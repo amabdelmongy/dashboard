@@ -3,13 +3,13 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { TableListComponent } from './table-list/table-list.component'; 
+import { DashboardComponent } from './dashboard/dashboard.component'; 
+import { TableListComponent } from './table-list/table-list.component';
+import {CreateTicketComponent} from "./create-ticket/create-ticket.component";
 
 const routes: Routes =[
     { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
+    { path: 'create-ticket', component: CreateTicketComponent },
     { path: 'table-list',     component: TableListComponent }, 
     { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
 ];
