@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { LocalStorageService } from 'angular-2-local-storage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +16,8 @@ export class NavbarComponent implements OnInit {
     private sidebarVisible: boolean;
 
     constructor(location: Location, private element: ElementRef,
-      public  localStorageService: LocalStorageService) {
+      public localStorageService: LocalStorageService, 
+      private router: Router) {
       this.location = location;
           this.sidebarVisible = false;
     }
@@ -66,4 +68,9 @@ export class NavbarComponent implements OnInit {
       }
       return 'Dashboard';
     }
+
+  private onClickLogout() { 
+    this.localStorageService.clearAll(); 
+    this.router.navigate(['/login']); 
+  }
 }

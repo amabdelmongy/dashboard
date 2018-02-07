@@ -16,13 +16,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NotificationService} from "./shared/notificationService";
 import { LocalStorageModule } from 'angular-2-local-storage';
 import {CreateTicketComponent} from "./create-ticket/create-ticket.component";
+import {LoginService} from "./apiServices/loginService";
+import {LoginComponent} from "./login/login.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CreateTicketComponent,
-    TableListComponent 
+    TableListComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -40,7 +43,7 @@ import {CreateTicketComponent} from "./create-ticket/create-ticket.component";
     })
     
   ],
-  providers: [TicketService, NotificationService],
+  providers: [TicketService, NotificationService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

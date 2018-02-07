@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LocalStorageService} from "angular-2-local-storage";
 
 declare const $: any;
 declare interface RouteInfo {
@@ -9,8 +10,10 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: 'dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: 'create-ticket', title: 'Submit new ticket',  icon:'person', class: '' },
-    { path: 'table-list', title: 'Table List',  icon:'content_paste', class: '' } 
+    { path: 'create-ticket', title: 'Submit new ticket', icon:'content_paste', class: '' },
+    { path: 'table-list', title: 'Table List', icon: '', class: '' },
+    { path: 'login', title: 'login', icon: 'person', class: '' } 
+
    
 ];
 
@@ -22,7 +25,7 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() { }
+  constructor(public localStorageService: LocalStorageService) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
