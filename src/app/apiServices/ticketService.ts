@@ -7,7 +7,7 @@ import {Ticket} from "../models/ticket";
 
 @Injectable()
 export class TicketService extends BaseApiService {
-  private urlTicketsCount =   "http://www.mocky.io/v2/5a7a6d582e00000d2f9a5dea"; 
+  private urlTicketsCount =   "http://www.mocky.io/v2/5a7b4cc7300000640028be6d"; 
   private urlsaveTicket ="https://requestb.in/1b4fu2v1";
   public getTicketsCount(): Observable<TicketsCount> {
     return this._http.get(this.urlTicketsCount)
