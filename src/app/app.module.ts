@@ -13,9 +13,9 @@ import { DataTableModule, SharedModule } from 'primeng/primeng';
  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataListModule } from 'primeng/components/datalist/datalist'; 
-import { DropdownModule } from 'primeng/components/dropdown/dropdown';
-import {MyHttpInterceptor} from "./pages/shared/httpinterceptor"; 
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
+import { DropdownModule } from 'primeng/components/dropdown/dropdown'; 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {ApiHttpInterceptor} from "./pages/shared/apiHttpInterceptor";
 
 @NgModule({
   declarations: [
@@ -44,7 +44,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
   providers: [ 
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: MyHttpInterceptor,
+      useClass: ApiHttpInterceptor,
       multi: true
     }],
   bootstrap: [AppComponent]

@@ -30,8 +30,8 @@ export class CreateTicketComponent implements OnInit {
       Email: ['', [Validators.required, Validators.email]],
       Subject: ['', [Validators.required]],
       Message: ['', [Validators.required]],
-      Type: ['', [Validators.required]],
-      Urgency: ['', [Validators.required]],
+      Type: ['Bug Report', [Validators.required]],
+      Urgency: ['Low', [Validators.required]],
     });
   }
 

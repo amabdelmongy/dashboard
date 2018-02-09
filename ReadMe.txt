@@ -5,7 +5,7 @@ Coding Challenge
 ### Problem Description
 
 A simple ticketing system. It consists of a frontend only.
-In the frontend, anonymous people can submit new tickets for the IT Support Team and logged in employees can view and edit committed tickets.  
+Anonymous people can submit new tickets for the IT Support Team and logged in employees can view and edit committed tickets.  
   
 The application have the following functionalities: 
   - **Submit new Ticket**  
