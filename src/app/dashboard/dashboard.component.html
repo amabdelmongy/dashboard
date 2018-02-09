@@ -1,300 +1,139 @@
 <div class="main-content">
-
-        <div class="container-fluid">
-            <div class="row" *ngIf="ticketsCount">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card card-stats" >
-                        <div class="card-header" data-background-color="orange">
-                          <i class="material-icons">content_copy</i>
-                        </div>
-                        <div class="card-content">
-                          <p class="category">Open</p>
-                          <h3 class="title">{{ticketsCount.open}} </h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons text-danger"> </i> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card card-stats" >
-                        <div class="card-header" data-background-color="green">
-                          <i class="material-icons">create</i>
-                        </div>
-                        <div class="card-content">
-                          <p class="category">In Progress</p>
-                          <h3 class="title">{{ticketsCount.inProgress}}</h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons"></i> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card card-stats" >
-                        <div class="card-header" data-background-color="red">
-                          <i class="material-icons">done</i>
-                        </div>
-                        <div class="card-content">
-                          <p class="category">Completed</p>
-                          <h3 class="title">{{ticketsCount.completed}}</h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons"></i> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card card-stats" >
-                      <div class="card-header" data-background-color="blue">
-                        <i class="material-icons">close</i> 
-                      </div>
-                        <div class="card-content">
-                          <p class="category">Rejected</p>
-                          <h3 class="title">{{ticketsCount.rejected}}</h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons"> </i>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card card-nav-tabs" >
-                        <div class="card-header" data-background-color="purple">
-                            <div class="nav-tabs-navigation">
-                                <div class="nav-tabs-wrapper">
-                                    <span class="nav-tabs-title">Tickets:</span>
-                                    <ul class="nav nav-tabs" data-tabs="tabs">
-                                        <li class="active">
-                                          <a href="#profile" data-toggle="tab">
-                                            <i class="material-icons">bug_report</i>
-                                            Bug Report  ({{ticketsCount.Bug}})
-                                            <div class="ripple-container"></div>
-                                          </a>
-                                        </li>
-                                        <li class="">
-                                          <a href="#messages" data-toggle="tab">
-                                            <i class="material-icons">code</i>
-                                            Feature Request ({{ticketsCount.Feature}})
-                                            <div class="ripple-container"></div>
-                                          </a>
-                                        </li>
-                                        <li class="">
-                                          <a href="#settings" data-toggle="tab">
-                                            <i class="material-icons">cloud</i>
-                                            Other ({{ticketsCount.Other}})
-                                            <div class="ripple-container"></div>
-                                          </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="profile">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes" checked>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                                </td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes" checked>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="tab-pane" id="messages">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes" checked>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                                </td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="tab-pane" id="settings">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes" checked>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                                </td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-            </div>
+  <div class="container-fluid" *ngIf="ticketsCount">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="orange">
+            <i class="material-icons">content_copy</i>
+          </div>
+          <div class="card-content">
+            <p class="category">Open</p>
+            <h3 class="title">{{ticketsCount.open}} </h3>
+          </div>
+         
         </div>
-</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="green">
+            <i class="material-icons">create</i>
+          </div>
+          <div class="card-content">
+            <p class="category">In Progress</p>
+            <h3 class="title">{{ticketsCount.inProgress}}</h3>
+          </div>
+           
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="red">
+            <i class="material-icons">done</i>
+          </div>
+          <div class="card-content">
+            <p class="category">Completed</p>
+            <h3 class="title">{{ticketsCount.completed}}</h3>
+          </div>
+           
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-header" data-background-color="blue">
+            <i class="material-icons">close</i>
+          </div>
+          <div class="card-content">
+            <p class="category">Rejected</p>
+            <h3 class="title">{{ticketsCount.rejected}}</h3>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+
+    <div class="row dashboard">
+      <div class="col-lg-12 col-md-12">
+        <div class="card card-nav-tabs">
+          <div class="card-header" data-background-color="purple">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <span class="nav-tabs-title">Tickets:</span>
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                  <li class="active" (click)="getTickets('Bug')">
+                    <a href="#Bug" data-toggle="tab">
+                      <i class="material-icons">bug_report</i>
+                      Bug Report  ({{ticketsCount.Bug}})
+                      <div class="ripple-container"></div>
+                    </a>
+                  </li>
+                  <li class="" (click)="getTickets('Feature')">
+                    <a href="#Feature" data-toggle="tab">
+                      <i class="material-icons">code</i>
+                      Feature Request ({{ticketsCount.Feature}})
+                      <div class="ripple-container"></div>
+                    </a>
+                  </li>
+                  <li class="" (click)="getTickets('Other')">
+                    <a href="#Other" data-toggle="tab">
+                      <i class="material-icons">cloud</i>
+                      Other ({{ticketsCount.Other}})
+                      <div class="ripple-container"></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="tab-content">
+              <p-dataList [value]="allTickets" [paginator]="true" [totalRecords]="ticketsCount.Bug"
+                          [rows]="5" [pageLinks]="3" [rowsPerPageOptions]="[5,10,50]"
+                          rowHover="true" selectionMode="single">
+                <ng-template let-ticket pTemplate="item">
+
+                  <div class="padding-15 ui-widget-content">
+                    <div>
+                      <div>
+                        <h3 class="title">
+                          <strong class="main-subject">{{ticket.Subject}} </strong>
+
+                          <small class="titleBackground blue"> {{ticket.Urgency}} Urgency</small>
+                          <small class="titleBackground red"> {{ticket.Type }} </small>
+                        </h3>
+                        <p class="category"><strong> {{ticket.Name }} </strong> {{ ticket.Email}} </p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="row">
+                        <div class="col-md-9">
+                          <p>  {{ticket.Message}}</p>
+                        </div>
+                        <div class="td-actions text-right col-md-2">
+
+                          <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              {{ticket.Status}}
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li><a (click)="onStatusClick(ticket,'Open');">Open</a></li>
+                              <li><a (click)="onStatusClick(ticket,'InProgress')">In Progress</a></li>
+                              <li><a (click)="onStatusClick(ticket,'Completed')">Complete</a></li>
+                              <li><a (click)="onStatusClick(ticket,'Reject')">Reject</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </p-dataList>
+       
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div> 

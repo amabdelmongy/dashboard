@@ -6,4 +6,5 @@
   public Message: string; 
   public Type: string; 
   public Urgency: string; 
+  public Status: string; 
 }

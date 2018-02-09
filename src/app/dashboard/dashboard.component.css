@@ -1,0 +1,39 @@
+.padding-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ 
+
+    .titleBackground  { 
+        border: 1px solid red;
+        padding: 2px;
+        border-radius: 25px;
+        width: 100px;
+       
+        text-align: center;
+      
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 5px;
+    }
+
+.red {
+    color: white;
+    background-color: #EC4B48;
+    border: 1px solid #EC4B48;
+}
+
+.blue {
+    color: white;
+    background-color: #0AB3C8;
+    border: 1px solid #0AB3C8;
+}
+
+
+
+.dashboard .card .category {
+    color: #9127AC;
+}
+.main-subject {
+    color: #9830B0
+}

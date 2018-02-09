@@ -13,21 +13,19 @@
                         <div class="form-group form-black label-floating is-empty">
                           <label class="control-label"> Name</label>
                           <input type="text" class="form-control" formControlName="Name">
-                          <span *ngIf="form.controls['Name'].errors" class="error-msg">
+                          <span *ngIf="form.controls['Name'].errors" class="text-danger">
                             <span  *ngIf=" form.controls['Name'].errors.required">*</span>
                           </span>
                         </div>
                       </div>
 
                     </div>
-                    <div class="row">
-
-
+                    <div class="row"> 
                       <div class="col-md-12">
                         <div class="form-group form-black label-floating is-empty">
                           <label class="control-label">Email address</label>
                           <input type="email" class="form-control" formControlName="Email">
-                          <span *ngIf="form.controls['Email'].errors" class="error-msg">
+                          <span *ngIf="form.controls['Email'].errors" class="text-danger">
                             <span *ngIf=" form.controls['Email'].errors.required">*</span>
                             
                             <span *ngIf=" form.controls['Email'].errors.email">please enter valid email</span>
@@ -41,23 +39,23 @@
                         <div class="form-group form-black label-floating is-empty">
                           <label class="control-label">Subject</label>
                           <input type="text" class="form-control" formControlName="Subject">
-                          <span *ngIf="form.controls['Subject'].errors" class="error-msg">
+                          <span *ngIf="form.controls['Subject'].errors" class="text-danger">
                             <span *ngIf=" form.controls['Subject'].errors.required">*</span>
                           </span>
                         </div>
                       </div>
 
                     </div>
-                    <div class="row">
-            
+                    <div class="row"> 
                       <div class="col-md-12">
+                        <label class="control-label">Type</label>
                         <div class="form-group form-black label-floating is-empty">
-                          <label class="control-label" class="col-md-3">Type</label>
+
                           <select name="Type" class="col-md-3" formControlName="Type" [(ngModel)]="Type">
-                            <option *ngFor="let item of types" [value]="item">{{item}}</option> 
+                            <option *ngFor="let item of types" [value]="item">{{item}}</option>
                           </select>
-                          <span *ngIf="form.controls['Type'].errors" class="error-msg">
-                            <span  *ngIf=" form.controls['Type'].errors.required">*</span>
+                          <span *ngIf="form.controls['Type'].errors" class="text-danger">
+                            <span *ngIf=" form.controls['Type'].errors.required">  *</span>
                           </span>
                         </div>
                       </div>
@@ -66,14 +64,15 @@
                     <div class="row">
             
                       <div class="col-md-12">
+                        <label class="control-label" >Urgency</label>
                         <div class="form-group form-black label-floating is-empty">
-                          <label class="control-label" class="col-md-3">Urgency</label>
+
                           <select name="Type" class="col-md-3" formControlName="Urgency" [(ngModel)]="Urgency">
                             <option *ngFor="let item of urgencies" [value]="item">{{item}}</option>
 
-                          </select> 
-                          <span *ngIf="form.controls['Urgency'].errors" class="error-msg">
-                            <span *ngIf=" form.controls['Urgency'].errors.required">*</span>
+                          </select>
+                          <span *ngIf="form.controls['Urgency'].errors" class="text-danger">
+                            <span *ngIf=" form.controls['Urgency'].errors.required"> *</span>
                           </span>
                         </div>
                       </div>
@@ -82,11 +81,11 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label>Message</label>
+                         <label class="control-label">Message</label>
                           <div class="form-group form-black label-floating is-empty">
                             <label class="control-label">Write all desription.</label>
                             <textarea class="form-control" rows="5" formControlName="Message"></textarea>
-                            <span *ngIf="form.controls['Message'].errors" class="error-msg">
+                            <span *ngIf="form.controls['Message'].errors" class="text-danger">
                               <span *ngIf=" form.controls['Message'].errors.required">*</span>
                             </span>
                           </div>

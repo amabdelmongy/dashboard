@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormControlName } from '@angular/forms';
 import {Ticket} from "../models/ticket";
 import {TicketService} from "../apiServices/ticketService";
-import { NotificationService} from "../shared/notificationService"; 
-
+import { NotificationService} from "../shared/notificationService";  
 @Component({
   selector: 'app-create-ticket',
   templateUrl: './create-ticket.component.html',
   styleUrls: ['./create-ticket.component.css']
 })
 export class CreateTicketComponent implements OnInit {
-
+  Type: string;
+  Urgency:string;
   public form: FormGroup;
   ticket: Ticket;
   types: string[] = ["Bug Report", "Feature Request", "Other"];

@@ -1,0 +1,22 @@
+ .titleBackground  { 
+     border: 1px solid red;
+     padding: 2px;
+     border-radius: 25px;
+     width: 100px;
+       
+     text-align: center;
+      
+     padding-left: 5px;
+     padding-right: 5px;
+     margin: 5px;
+ }
+
+.aqua {
+    color: white;
+    background-color: #2FB5A0;
+    border: 1px solid #2FB5A0;
+}
+
+.profile-name {
+    color: #9c27b0;
+}

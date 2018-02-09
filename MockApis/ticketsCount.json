@@ -1,0 +1,9 @@
+{
+  "open": "5",
+  "inProgress": "5",
+  "completed": "80",
+  "rejected": "10",
+  "Bug": "50",
+  "Feature": "30",
+  "Other": "20"
+}
