@@ -33,12 +33,6 @@ export class BaseApiService {
     }
     console.error(errorMessage);
     return Observable.throw(errorMessage);
-  }
-
-  protected  getJsonAsString(data) {
-    return JSON.stringify(data);
-  }
-
-   
+  } 
  
 }
