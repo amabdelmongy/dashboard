@@ -1,23 +1,58 @@
-## Try to solve 
-https://gist.github.com/sebastianmach/10f377cc6a3dfcf46e8510d7b0732c3b
 
-_____________________
+Coding Challenge
+================
+  
+### Problem Description
 
-## Get free template from https://www.creative-tim.com/product/material-dashboard-angular2 
+A simple ticketing system. It consists of a frontend only.
+In the frontend, anonymous people can submit new tickets for the IT Support Team and logged in employees can view and edit committed tickets.  
+  
+The application have the following functionalities: 
+  - **Submit new Ticket**  
+    Anonymous users should be able to submit new tickets by filling out a form with the following fields:  
+    - Name
+    - Email
+    - Subject
+    - Type (*Bug Report*, *Feature Request*, *Other*)
+    - Urgency (*Low*, *Mid*, *High*)
+    - Message
 
-_____________________
+  - **View, Edit status Tickets (login required)**  
+    Logged in users should be able to see a list of all submitted tickets. 
+    Each ticket must also have one of the following status:  
+    - *Open*
+    - *In Progress*
+    - *Completed*
+    - *Rejected*
+    
+### Solution Description
 
-## Use Mocky to Get Http request 
-Mock your HTTP responses to test your REST API https://www.mocky.io/
+	The application contains two main modules :-
+		- first module contains Dashboard , open ticket and side menu
+		- second module contains login view  
 
-## use https://requestb.in to Post Http request 
-https://requestb.in/1b4fu2v1?inspect
-_____________________
+### Technology   
+ -  using Angular 4 , Angular cli , Type Script , Bootstrap , HTML, CSS 
+ 
+ -  using free template and modify in the hierarchy  from https://www.creative-tim.com/product/material-dashboard-angular2 
+ 
+-  Use Mocky to Get Http request Mock your HTTP responses to test your REST API https://www.mocky.io/
 
-## Add NotificationService 
- --Todo add method for every type like Error and Info
+-  use https://requestb.in to Post Http request https://requestb.in/1b4fu2v1?inspect
 
-_______________________
-## ToDo 
+###  How to run the code
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and angular 4.x.
 
-- move all URLs to webconfig.json file to enable change all urls in producation mode 
+1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
+2. Open Terminal
+3. Go to your file project
+4. Make sure you have installed [Angular CLI](https://github.com/angular/angular-cli) already. If not, please install.
+5. Run in terminal: ```npm install```
+6. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+### ToDo 
+- Notification service add method for every type like Error and Info
+- move all URLs to webconfig.json file to enable change all urls in production mode

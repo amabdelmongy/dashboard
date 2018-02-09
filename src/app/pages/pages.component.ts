@@ -24,7 +24,8 @@ export class PagesComponent implements OnInit {
   constructor(public location: Location, private router: Router,
     private localStorageService: LocalStorageService) { }
 
-  ngOnInit() {
+  ngOnInit() { 
+
     $.material.init();
     const elemMainPanel = <HTMLElement>document.querySelector('.main-panel');
     const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
