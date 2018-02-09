@@ -3,42 +3,30 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app.routing';
-import { ComponentsModule } from './components/components.module';
+import {  routing } from './app.routing'; 
 
 import { AppComponent } from './app.component';
-
-import { DashboardComponent } from './dashboard/dashboard.component';  
-import {TicketService} from "./apiServices/ticketService"; 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {NotificationService} from "./shared/notificationService";
-import { LocalStorageModule } from 'angular-2-local-storage';
-import {CreateTicketComponent} from "./create-ticket/create-ticket.component";
-import {LoginService} from "./apiServices/loginService";
-import {LoginComponent} from "./login/login.component"; 
+ 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { LocalStorageModule } from 'angular-2-local-storage'; 
 import { DataTableModule, SharedModule } from 'primeng/primeng';  
  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataListModule } from 'primeng/components/datalist/datalist'; 
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
-import {MyHttpInterceptor} from "./shared/httpinterceptor"; 
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {MyHttpInterceptor} from "./pages/shared/httpinterceptor"; 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    CreateTicketComponent, 
-    LoginComponent
+    AppComponent
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    ComponentsModule,
-    RouterModule,
-    AppRoutingModule,
+    HttpModule , 
+    RouterModule, 
     HttpClientModule,
     ReactiveFormsModule,  
     LocalStorageModule.withConfig({
@@ -49,10 +37,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     SharedModule,
     BrowserAnimationsModule,
     DataListModule,
-    DropdownModule
+    DropdownModule,
+    routing     
     
   ],
-  providers: [TicketService, NotificationService, LoginService, 
+  providers: [ 
     {
       provide: HTTP_INTERCEPTORS,
       useClass: MyHttpInterceptor,
