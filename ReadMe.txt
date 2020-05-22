@@ -1,8 +1,4 @@
-
-Coding Challenge
-================
-  
-### Problem Description
+###  Description
 
 A simple ticketing system. It consists of a frontend only.
 Anonymous people can submit new tickets for the IT Support Team and logged in employees can view and edit committed tickets.  
@@ -54,7 +50,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 4. Make sure you have installed [Angular CLI](https://github.com/angular/angular-cli) already. If not, please install.
 5. Run in terminal: ```npm install```
 6. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-7. Build to productaion: ng build –prod –aot
+7. Build to productaion: ng build â€“prod â€“aot
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
